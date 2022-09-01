@@ -15,12 +15,12 @@
 # 设置首次登录后台密码为空（进入openwrt后自行修改密码）
 # sed -i '/CYXluq4wUazHjmCDBCqXF/d' $ZZZ_PATH
 
-#sed -i 's/PATCHVER:=5.15/PATCHVER:=5.10/g' target/linux/x86/Makefile  #x86机型,默认内核5.15，修改内核5.10（去掉sed前面的#生效）
+# sed -i 's/PATCHVER:=5.15/PATCHVER:=5.10/g' target/linux/x86/Makefile  #x86机型,默认内核5.15，修改内核5.10（去掉sed前面的#生效）
 
-echo '修改upnp绑定文件位置'
-sed -i 's/\/var\/upnp.leases/\/tmp\/upnp.leases/g' feeds/packages/net/miniupnpd/files/upnpd.config
-cat feeds/packages/net/miniupnpd/files/upnpd.config |grep upnp_lease_file
-echo '=========Alert upnp binding file directory!========='
+# echo '修改upnp绑定文件位置'
+# sed -i 's/\/var\/upnp.leases/\/tmp\/upnp.leases/g' feeds/packages/net/miniupnpd/files/upnpd.config
+# cat feeds/packages/net/miniupnpd/files/upnpd.config |grep upnp_lease_file
+# echo '=========Alert upnp binding file directory!========='
 
 
 echo '修改主机名'
